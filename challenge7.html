@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Challenge 7 – JS Decode</title></head>
+<body>
+<h2>Challenge 7 – JS Decode</h2>
+<p>The flag is encoded in JavaScript. Can you reveal it?</p>
+
+<script>
+let encoded = [51, 67, 83, 123, 74, 83, 95, 111, 98, 102, 117, 115, 99, 97, 116, 105, 111, 110, 125];
+let flag = "";
+for (let i of encoded) { flag += String.fromCharCode(i); }
+console.log("Flag:", flag);
+</script>
+
+<p>Hint: Check your browser console (F12 → Console).</p>
+</body>
+</html>

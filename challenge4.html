@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Challenge 4 – Weak Login</title></head>
+<body>
+<h2>Challenge 4 – Weak Login</h2>
+<p>Login to get the flag.</p>
+<input id="u" placeholder="Username">
+<input id="p" type="password" placeholder="Password">
+<button onclick="checkLogin()">Login</button>
+
+<script>
+function checkLogin() {
+  let u = document.getElementById("u").value;
+  let p = document.getElementById("p").value;
+  if(u === "admin" && p === "admin123") {
+    alert("Flag: 3CS{Weak_Login_Bypass}");
+  } else {
+    alert("Wrong!");
+  }
+}
+</script>
+</body>
+</html>

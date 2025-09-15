@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Challenge 8 – SQL Injection</title></head>
+<body>
+<h2>Challenge 8 – SQL Injection</h2>
+<p>Can you bypass this login form?</p>
+
+<form onsubmit="return false;">
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button onclick="check()">Login</button>
+</form>
+
+<script>
+function check() {
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+  if(u.includes("' OR '1'='1") || p.includes("' OR '1'='1")) {
+    alert("Flag: 3CS{SQL_injection_master}");
+  } else {
+    alert("Wrong!");
+  }
+}
+</script>
+</body>
+</html>
